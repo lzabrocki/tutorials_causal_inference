@@ -369,7 +369,7 @@ We will rely now on propensity score matching where the goal is (i) to predict f
 # match without caliper
 matching_ps <-
   matchit(
-    treat ~ treat + age + education + black + hispanic + married + nodegree + re74 + re75,
+    treat ~ age + education + black + hispanic + married + nodegree + re74 + re75,
     data = observational_data
   )
 
@@ -460,7 +460,7 @@ In this second analysis, we try to be more strict for the distance metric used i
 # match without caliper
 matching_ps_caliper <-
   matchit(
-    treat ~ treat + age + education + black + hispanic + married + nodegree + re74 + re75,
+    treat ~ age + education + black + hispanic + married + nodegree + re74 + re75,
     caliper = 0.1,
     data = observational_data
   )
